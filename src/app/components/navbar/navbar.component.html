@@ -1,0 +1,18 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" [routerLink]="['quienessomos']" routerLinkActive="active">CIFA</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" [routerLink]="['rutas']" routerLinkActive="active">RUTAS</a>
+         
+          <form class="d-flex" role="search">
+            <input #buscarTxt class="form-control me-2" type="search" placeholder="Search" aria-label="Search" (keyup.enter)="buscarRuta(buscarTxt.value)">
+            <button (click) ="buscarRuta(buscarTxt.value)"   [routerLink]="['verruta']" routerLinkActive="active"  class="btn btn-outline-success"  routerLinkActive="active"type="submit">Buscar</button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </nav>
